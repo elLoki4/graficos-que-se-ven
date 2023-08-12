@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ChartOptions } from 'chart.js';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,20 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  title = 'CodeSandbox';
+  title = 'ng2-charts-demo';
+
+  // Pie
+  public pieChartOptions: ChartOptions<'pie'> = {
+    responsive: false,
+  };
+  public pieChartLabels = ['mayo', 'junio', 'julio', 'agosto', 'septiembre'];
+  public pieChartDatasets = [
+    {
+      data: [1.6, 1.5, 1.3, 2.5, 1.0],
+    },
+  ];
+  public pieChartLegend = true;
+  public pieChartPlugins = [];
+
+  constructor() {}
 }
