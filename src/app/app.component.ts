@@ -10,7 +10,7 @@ export class AppComponent {
   title = 'ng2-charts-demo';
 
   // Pie
-  public pieChartOptions: ChartOptions<'pie'> = {
+  public pieChartOptions: ChartOptions<'line'> = {
     responsive: false,
   };
   public pieChartLabels = ['mayo', 'junio', 'julio', 'agosto', 'septiembre'];
